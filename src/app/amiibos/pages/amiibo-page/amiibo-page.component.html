@@ -1,0 +1,75 @@
+<div class="row mt-5 text-center">
+  <div class="col-12 text-center">
+    <h1>{{amiibo?.name}}</h1>
+  </div>
+</div>
+
+
+
+
+<div class="row mt-5 text-center">
+
+  <div class="col-lg-4 col-md-6 col-sm-12 mb-10">
+    <img src="{{amiibo?.image}}" class="card-img-top mx-auto" alt="...">
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-sm-12 mt-15">
+    <h6>Details</h6>
+
+    <table class="table table-striped table-bordered align-middle text-center mt-4">
+      <tbody>
+        <tr>
+          <th>Full Name</th>
+          <td class="text-center">{{amiibo?.name}}</td>
+        </tr>
+        <tr>
+          <th>Character</th>
+          <td class="text-center">{{amiibo?.character}}</td>
+        </tr>
+        <tr>
+          <th>Amiibo Series</th>
+          <td class=" text-center">{{amiibo?.amiiboSeries}}</td>
+        </tr>
+        <tr>
+          <th>Game Franchise</th>
+          <td class="text-center">{{amiibo?.gameSeries}}</td>
+        </tr>
+        <tr>
+          <th>Head Code</th>
+          <td class="text-center">{{amiibo?.head}}</td>
+        </tr>
+        <tr>
+          <th>Tail Code</th>
+          <td class="text-center">{{amiibo?.tail}}</td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center"><button type="button" class="btn btn-dark" onclick="history.back()">Return
+              to Amiibo list</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-sm-12">
+    <h6>Release Date</h6>
+    <ul>
+      <li><img class="flag border rounded dark"
+          src="https://flagicons.lipis.dev/flags/4x3/jp.svg"><b>{{amiibo?.release?.jp |
+          date:
+          'dd/MM/yyyy'}}</b></li>
+      <li><img class="flag border rounded" src="https://flagicons.lipis.dev/flags/4x3/us.svg"><b>{{amiibo?.release?.na
+          |
+          date:
+          'dd/MM/yyyy'}}</b></li>
+      <li><img class="flag border rounded" src="https://flagicons.lipis.dev/flags/4x3/eu.svg"><b>{{amiibo?.release?.eu
+          |
+          date:
+          'dd/MM/yyyy'}}</b></li>
+      <li><img class="flag border rounded" src="https://flagicons.lipis.dev/flags/4x3/au.svg"><b>{{amiibo?.release?.au
+          |
+          date:
+          'dd/MM/yyyy'}}</b></li>
+    </ul>
+  </div>
+</div>

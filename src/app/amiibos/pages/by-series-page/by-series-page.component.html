@@ -1,0 +1,16 @@
+<h5>Seach by Amiibo series</h5>
+<hr>
+
+<div class="row text-center">
+  <div class="col-lg-12 col-md-8 col-sm-8 mx-auto">
+    <!-- SearchBox -->
+    <shared-search-box (onValue)="searchByAmiiboSeries($event)"
+      placeholder="Enter an Amiibo series (Example: Super Smash Bros)">
+    </shared-search-box>
+  </div>
+</div>
+
+<div class="container text-center">
+  <hr>
+  <app-amiibo-list-page [amiibos]="amiibos" [hasSearched]="hasSearched"></app-amiibo-list-page>
+</div>
