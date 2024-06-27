@@ -4,7 +4,7 @@
     No products available with those search terms
   </div>
 
-  <p *ngIf="hasSearched && amiibos.length > 1">Results found: {{amiibos.length}}</p>
+  <p *ngIf="hasSearched && amiibos.length > 0">Results found: {{amiibos.length}}</p>
   <div *ngFor="let amiibo of amiibos" class="col-lg-4 col-md-6 col-sm-12 mb-4">
     <a [routerLink]="['/amiibos/by', amiibo.tail]" class="card-link">
       <div class="card text-center h-100 shadow bg-body rounded">
