@@ -4,10 +4,11 @@
     No products available with those search terms
   </div>
 
-  <p *ngIf="hasSearched && amiibos.length > 0">Results found: {{amiibos.length}}</p>
+  <p *ngIf="hasSearched && amiibos.length > 0">Results found: <strong>{{amiibos.length}}</strong></p>
+  <p *ngIf="hasSearched && amiibos.length > 0">Click on any Amiibo to view its details!</p>
   <div *ngFor="let amiibo of amiibos" class="col-lg-4 col-md-6 col-sm-12 mb-4">
     <a [routerLink]="['/amiibos/by', amiibo.tail]" class="card-link">
-      <div class="card text-center h-100 shadow bg-body rounded">
+      <div class="card text-center h-100 bg-body rounded">
         <img src="{{amiibo.image}}" class="card-img-top mx-auto" alt="...">
         <div class="card-body">
           <h5 class="card-title">{{amiibo.name}}</h5>

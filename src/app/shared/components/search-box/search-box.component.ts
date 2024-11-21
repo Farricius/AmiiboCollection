@@ -7,11 +7,14 @@ import { Subject, debounceTime } from 'rxjs';
   styleUrl: './search-box.component.css',
 })
 export class SearchBoxComponent implements OnInit {
-  // Necesario para mostrar datos mientras cliente escribe en búsqueda
+  // Necesario para mostrar datos 'mientras' cliente escribe en búsqueda
   private debouncing: Subject<string> = new Subject();
 
   @Input()
   public placeholder: string = '';
+
+  @Input()
+  public searchBoxValue: string = '';
 
   @Output()
   public onValue = new EventEmitter<string>();
